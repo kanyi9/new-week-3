@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Function to display the list of films
     function displayFilms(films) {
       const filmsList = document.getElementById('films');
-      filmsList.innerHTML = ''; // Clear the current list of films
+      filmsList.innerHTML = ''; 
       films.forEach(film => {
         const filmItem = document.createElement('li');
         filmItem.dataset.filmId = film.id;
