@@ -1,7 +1,7 @@
 // Your code here
 // Fetch the list of films from the API
 document.addEventListener('DOMContentLoaded', async function() {
-    // Function to fetch the list of films from the server
+    // Function to fetch the list of films
     async function fetchFilms() {
       try {
         const response = await fetch('http://localhost:3000/films');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function() {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ tickets_sold: ticketsSold + 1 }) // Note: Define ticketsSold somewhere
+          body: JSON.stringify({ tickets_sold: ticketsSold + 1 }) 
         });
         const filmData = await response.json();
         const ticketNum = document.getElementById('ticket-num');
